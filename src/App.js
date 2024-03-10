@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [data, setData] = React.useState("")
 //   const connectToDevice = async () => {
 //     const device = await navigator.bluetooth
 //     .requestDevice({
@@ -32,13 +33,17 @@ function App() {
 const handleConnect = async () => {
   const response = await fetch("http://localhost:5500/api/test");
   const data = await response.json()
+  setData(data.data)
   console.log(data, "------35------")
 }
   return (
 //     <div className="App">
 // <button className="bluetooth" onClick={connectToDevice}>CONNECT</button>
 //     </div>
+<>
 <button onClick={handleConnect}>Connect to Server</button>
+<p>{data}</p>
+</>
   );
 }
 
