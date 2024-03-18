@@ -1,0 +1,16 @@
+name: Notify Teams on Workflow Success
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  notify-teams:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Teams
+        uses: neonidian/teams-notify-build-status@v3
+        with:
+          webhookUrl: https://oves159.webhook.office.com/webhookb2/66a4cf1c-d471-4aa0-b9b9-2d6063371b13@883916b0-e831-4935-9836-7ee891edaf7c/IncomingWebhook/df4984dd35c54e6baf89ede90f0a3605/c8685fcc-4a30-485e-a23c-fdf91487ea91
+          message: Test that the Work FLow works(Test 2---)
