@@ -38,7 +38,7 @@ const handleConnect = async () => {
 }
   return (
     <div className="App">
-<button className="bluetooth" onClick={connectToDevice}>CONNECT</button>
+<button className="bluetooth" style={{border: "1px solid black"}} onClick={connectToDevice}>CONNECT</button>
     </div>
 // {/* <>
 // <button onClick={handleConnect}>Connect to Server</button>
